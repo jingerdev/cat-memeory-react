@@ -142,7 +142,7 @@ const App = () => {
   return (
     <>
       <header>
-        <h1>Cat Memory</h1>
+        <h1>Meowmory</h1>
         <button onClick={() => resetGame()}>Restart</button>
       </header>
       <div className='grid-container'>
@@ -155,7 +155,10 @@ const App = () => {
           />
         ))}
       </div>
-      <h1>Tries: {triesCount}</h1>
+      <div className='tries'>
+        <p>Tries: </p>
+        <p>{triesCount}</p>
+      </div>
     </>
   )
 }
