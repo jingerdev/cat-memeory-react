@@ -64,7 +64,7 @@ const App = () => {
   // Should maintain 2 flip count at a time
   const [flipCount, setFlipCount] = useState(0)
   const [openedCards, setOpenedCards] = useState([])
-  const [images, setImages] = useState(allImages)
+  const [images, setImages] = useState([...allImages, ...allImages])
   const [triesCount, setTriesCount] = useState(0)
   const [openedCount, setOpenedCount] = useState(0)
   
@@ -142,7 +142,7 @@ const App = () => {
   return (
     <>
       <header>
-        <h1>Meowmory</h1>
+        <h2>Meowmory</h2>
         <button onClick={() => resetGame()}>Restart</button>
       </header>
       <div className='grid-container'>
